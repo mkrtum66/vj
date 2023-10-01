@@ -1,7 +1,6 @@
 import React from 'react';
 import './homePage.scss';
-
-import Container from '@mui/material/Container';
+import { Container } from 'react-bootstrap';
 
 const HomePage = () => {
   return (

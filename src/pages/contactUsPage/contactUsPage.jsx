@@ -1,7 +1,6 @@
 import React from 'react';
 import './contactUsPage.scss';
-
-import Container from '@mui/material/Container';
+import { Container } from 'react-bootstrap';
 
 const ContactUsPage = () => {
   return (
