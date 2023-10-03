@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap';
 
 const ContactUsPage = () => {
   return (
-    <div className="contactUsPage">
+    <div className="contactUsPage page-wrapper">
       <Container>
         <h1>Contact Us Page</h1>
       </Container>

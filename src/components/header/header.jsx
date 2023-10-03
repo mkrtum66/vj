@@ -124,8 +124,8 @@ const Header = ({ setMyRef }) => {
                   </NavLink>
                 </div>
                 <div className={'dropdown-link'}>
-                  <NavLink to={'/'} onClick={() => clickOnLink('warranties')}>
-                    Warranties
+                  <NavLink to={'/'} onClick={() => clickOnLink('partners')}>
+                    Partners
                   </NavLink>
                 </div>
               </NavDropdown>
@@ -144,16 +144,6 @@ const Header = ({ setMyRef }) => {
                 <div className={'dropdown-link'}>
                   <NavLink to={'/commercial'} onClick={() => clickOnLink('')}>
                     Commercial
-                  </NavLink>
-                </div>
-                <div className={'dropdown-link'}>
-                  <NavLink to={'/battery-storage'} onClick={() => clickOnLink('')}>
-                    Battery Storage
-                  </NavLink>
-                </div>
-                <div className={'dropdown-link'}>
-                  <NavLink to={'/financing'} onClick={() => clickOnLink('')}>
-                    Financing
                   </NavLink>
                 </div>
                 <div className={'dropdown-link'}>
@@ -176,7 +166,7 @@ const Header = ({ setMyRef }) => {
               </div>
             </Nav>
             <NavLink to="/get-started" onClick={() => setExpanded(false)}>
-              <Button className={'get-started-btn'}>Get Started</Button>
+              <Button className={'get-started-btn'}>Call Now</Button>
             </NavLink>
           </Navbar.Collapse>
         </Container>
