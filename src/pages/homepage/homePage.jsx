@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './homePage.scss';
 import { Container } from 'react-bootstrap';
 import { scrollToSection } from '../../utils/scrollToSection';
+import Title from '../../components/title';
 
 const HomePage = ({ myRef }) => {
   useEffect(() => {
@@ -11,18 +12,17 @@ const HomePage = ({ myRef }) => {
   return (
     <div className="homepage page-wrapper">
       <Container>
-        <h1>Home Page</h1>
         <section id="ourCompany" className="section-wrapper">
-          <h1>Our Company</h1>
+          <Title>Our Company</Title>
         </section>
         <section id="team" className="section-wrapper">
-          <h1>Our Team</h1>
+          <Title>Our Team</Title>
         </section>
         <section id="partners" className="section-wrapper">
-          <h1>Partners</h1>
+          <Title>Partners</Title>
         </section>
         <section id="services" className="section-wrapper">
-          <h1>Services</h1>
+          <Title>Services</Title>
         </section>
       </Container>
     </div>

@@ -14,6 +14,7 @@ import BlogPage from './pages/blogPage';
 import FaqPage from './pages/faqPage';
 import PortfolioPage from './pages/portfolioPage';
 import CommercialPage from './pages/commercialPage';
+import ScrollTopButton from './components/scrollTopButton/scrollTopButton';
 
 const App = () => {
   const [myRef, setMyRef] = useState();
@@ -37,6 +38,7 @@ const App = () => {
         </Routes>
       </div>
       <Footer />
+      <ScrollTopButton />
     </div>
   );
 };
