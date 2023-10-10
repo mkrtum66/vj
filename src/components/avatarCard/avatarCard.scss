@@ -1,0 +1,30 @@
+.avatar{
+  max-width: 300px;
+  width: 100%;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  .img-wrapper{
+    width: 100%;
+    min-height: 170px;
+    background: #46cdcf;
+  }
+  .member-info{
+    padding: 25px 15px;
+    .full-name{
+      font-weight: 700;
+      margin-bottom: 5px;
+      font-size: 18px;
+      color: #151515;
+      text-transform: capitalize;
+    }
+    .position{
+      display: block;
+      font-size: 13px;
+      font-weight: 400;
+      color: #aaaaaa;
+      margin: 0;
+    }
+  }
+}
