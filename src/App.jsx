@@ -1,23 +1,35 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './global.scss';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+import Header from './components/header';
+import Footer from './components/footer';
+import ScrollTopButton from './components/scrollTopButton';
+
 import HomePage from './pages/homepage';
 import ContactUsPage from './pages/contactUsPage';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './components/header';
-import ScrollToTop from './utils/scrollToTop';
-import Footer from './components/footer';
 import ResidentialPage from './pages/residentialPage';
 import PrivacyPolicyPage from './pages/privacyPolicyPage';
-import AccessabilityPage from './pages/accessabilityPage';
+import AccessibilityPage from './pages/accessibilityPage';
 import BlogPage from './pages/blogPage';
 import FaqPage from './pages/faqPage';
 import PortfolioPage from './pages/portfolioPage';
 import CommercialPage from './pages/commercialPage';
-import ScrollTopButton from './components/scrollTopButton/scrollTopButton';
+
+import ScrollToTop from './utils/scrollToTop';
+import ServicesPage from './pages/servicesPage';
 
 const App = () => {
   const [myRef, setMyRef] = useState();
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
 
   return (
     <div className="App">
@@ -29,11 +41,12 @@ const App = () => {
           <Route path={'/residential'} element={<ResidentialPage />} />
           <Route path={'/commercial'} element={<CommercialPage />} />
           <Route path={'/portfolio'} element={<PortfolioPage />} />
+          <Route path={'/services'} element={<ServicesPage />} />
           <Route path={'/contact-us'} element={<ContactUsPage />} />
 
           <Route path={'/faq'} element={<FaqPage />} />
           <Route path={'/blog'} element={<BlogPage />} />
-          <Route path={'/accessibility'} element={<AccessabilityPage />} />
+          <Route path={'/accessibility'} element={<AccessibilityPage />} />
           <Route path={'/privacy-policy'} element={<PrivacyPolicyPage />} />
         </Routes>
       </div>

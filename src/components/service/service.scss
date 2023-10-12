@@ -1,0 +1,51 @@
+.service{
+  width: 100%;
+  height: fit-content;
+  padding: 50px 30px;
+  border-radius: 5px;
+  border: 1px solid #46cdcf;
+  transition: all 300ms ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  box-shadow: 0 0 5px 2px rgba(70, 205, 207, 0.6);
+  &:hover{
+    transform: scale(1.03);
+  }
+  .service-description{
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-align: justify;
+    line-height: 1.1;
+  }
+  .service-title{
+    p{
+      font-weight: bold;
+      font-size: 24px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+  .read-more-btn{
+    background: transparent;
+    color: #1876d2;
+    font-weight: bold;
+    border: 1px solid transparent;
+    transition: all 300ms ease-in-out;
+    border-radius: 5px;
+    padding: 4px 8px;
+    &:hover{
+      border: 1px solid #1876d2;
+    }
+    &:active{
+      background: #1876d2;
+      color: #ffffff;
+    }
+  }
+}

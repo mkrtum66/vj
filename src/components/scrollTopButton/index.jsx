@@ -1,1 +1,1 @@
-export { default } from './scrollTopButton.scss';
+export { default } from './scrollTopButton';

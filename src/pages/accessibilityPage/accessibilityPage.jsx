@@ -1,7 +1,7 @@
 import React from 'react';
-import './accessabilityPage.scss';
+import './accessibilityPage.scss';
 
-const AccessabilityPage = () => {
+const AccessibilityPage = () => {
   return (
     <div className="accessabilityPage page-wrapper">
       <div className="container">
@@ -110,4 +110,4 @@ const AccessabilityPage = () => {
   );
 };
 
-export default AccessabilityPage;
+export default AccessibilityPage;

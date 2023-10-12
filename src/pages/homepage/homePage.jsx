@@ -5,7 +5,9 @@ import { scrollToSection } from '../../utils/scrollToSection';
 import Title from '../../components/title';
 
 import check from '../../assets/icons/double-check.png';
-import AvatarCard from '../../components/avatarCard';
+import Team from '../../components/team';
+import Service from '../../components/service/service';
+import { services } from '../../components/service/mock';
 
 const HomePage = ({ myRef }) => {
   useEffect(() => {
@@ -91,27 +93,22 @@ const HomePage = ({ myRef }) => {
         </section>
         <section id="team" className="section-wrapper">
           <Title>Our Team</Title>
-          <AvatarCard imgUrl={''} person={'Vrezh Abramyan'} personPosition={'Founder and CEO'} />
+          <Team />
         </section>
         <section id="partners" className="section-wrapper">
           <Title>Partners</Title>
         </section>
         <section id="services" className="section-wrapper">
-          <Title>Services</Title>
-          <p>
-            <b>Custom Glass Cutting:</b> We offer precision glass cutting services to fit your
-            unique needs. From windows and doors to shelving and display cases, we provide
-            high-quality, customized glass solutions. <b>Mirror Installation:</b> Our mirror
-            installation services can transform any space. Whether you're aiming for a contemporary,
-            classic, or minimalist look, our mirrors can help you achieve the desired ambiance.
-            <b>Glass Repairs:</b> Accidents happen, and when they do, we're here to help. We offer
-            prompt and efficient glass repair services to restore the safety and aesthetics of your
-            property. <b>Frameless Shower Enclosures:</b> Elevate your bathroom with our exquisite
-            frameless shower enclosures. They not only add a touch of luxury but also create a sense
-            of spaciousness. <b>Glass and Mirror Design:</b> Our team of experts can help you design
-            and customize glass and mirror solutions that perfectly complement your space. We're
-            here to turn your ideas into reality.
-          </p>
+          <Title>Our Services</Title>
+          <div className="row">
+            {services.slice(0, 6).map(item => {
+              return (
+                <div key={item.id} className="col-lg-4 col-md-6 col-12 mb-4">
+                  <Service imgUrl={item.icon} title={item.title} description={item.description} />
+                </div>
+              );
+            })}
+          </div>
         </section>
       </Container>
     </div>
