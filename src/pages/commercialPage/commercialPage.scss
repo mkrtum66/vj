@@ -1,3 +1,43 @@
 .commercialPage{
-
+  .title{
+    font-size: 28px;
+    font-weight: bold;
+    color: #46cdcf;
+  }
+  .description{
+    margin-bottom: 0;
+  }
+  .img-wrapper{
+    width: 100%;
+    height: 100%;
+    background: #46cdcf;
+    border-radius: 5px;
+    overflow: hidden;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  ul{
+    list-style: none;
+    li{
+      position: relative;
+      &::before {
+        content: "";
+        color: red;
+        width: 8px;
+        height: 8px;
+        border-radius: 1000px;
+        margin-right: 7px;
+        background: #46cdcf;
+        display: inline-block;
+        margin-left: -1em;
+      }
+      span{
+        font-weight: bold;
+        color: #46cdcf;
+      }
+    }
+  }
 }
