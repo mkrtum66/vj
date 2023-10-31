@@ -19,8 +19,8 @@ const HomePage = ({ myRef }) => {
       <section id="welcome" className="section-wrapper">
         <Container>
           <div className="center-text">
-            <h1>VJ Glass & Mirrors</h1>
-            <h2>Your Source for Stunning Glass and Mirrors</h2>
+            <h1>VJ Glass & Moldings</h1>
+            <h2>Your Source for Stunning Glass and Moldings</h2>
             <p>
               We're dedicated to bringing beauty and elegance into your life <br /> through the
               artistry of glass and mirrors.
@@ -95,9 +95,9 @@ const HomePage = ({ myRef }) => {
           <Title>Our Team</Title>
           <Team />
         </section>
-        <section id="partners" className="section-wrapper">
-          <Title>Partners</Title>
-        </section>
+        {/*<section id="partners" className="section-wrapper">*/}
+        {/*  <Title>Partners</Title>*/}
+        {/*</section>*/}
         <section id="services" className="section-wrapper">
           <Title>Our Services</Title>
           <div className="row">

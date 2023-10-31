@@ -1,6 +1,6 @@
 .service{
   width: 100%;
-  height: fit-content;
+  height: 100%;
   padding: 50px 30px;
   border-radius: 5px;
   border: 1px solid #46cdcf;
@@ -30,6 +30,9 @@
       font-size: 24px;
       margin-bottom: 10px;
       text-align: center;
+      //@media (max-width: 1399px) {
+      //  font-size: 21px;
+      //}
     }
   }
   .read-more-btn{
