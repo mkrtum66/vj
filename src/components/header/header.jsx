@@ -123,11 +123,11 @@ const Header = ({ setMyRef }) => {
                     Team
                   </NavLink>
                 </div>
-                <div className={'dropdown-link'}>
-                  <NavLink to={'/'} onClick={() => clickOnLink('partners')}>
-                    Partners
-                  </NavLink>
-                </div>
+                {/*<div className={'dropdown-link'}>*/}
+                {/*  <NavLink to={'/'} onClick={() => clickOnLink('partners')}>*/}
+                {/*    Partners*/}
+                {/*  </NavLink>*/}
+                {/*</div>*/}
               </NavDropdown>
               <NavDropdown
                 title="Products"

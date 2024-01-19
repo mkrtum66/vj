@@ -1,12 +1,12 @@
 import { v4 as uuid } from 'uuid';
-import cutter from '../../assets/icons/cutters.png';
+import measurement from '../../assets/icons/measurement.png';
 import reflection from '../../assets/icons/reflection.png';
 import window from '../../assets/icons/window.png';
 import shower from '../../assets/icons/shower.png';
 import mirror from '../../assets/icons/mirror.png';
 import railing from '../../assets/icons/footsteps.png';
 
-import glassCutting from '../../assets/servicesImages/glass-cutting.png';
+import windowMeasurment from '../../assets/servicesImages/window-measurment.jpeg';
 import mirrorInstallation from '../../assets/servicesImages/mirror-ntsallation.png';
 import windowRepair from '../../assets/servicesImages/window-repair.jpeg';
 import frameLessShower from '../../assets/servicesImages/frameless-shower.jpeg';
@@ -21,11 +21,11 @@ import storeFront from '../../assets/servicesImages/storefront.jpeg';
 export const services = [
   {
     id: uuid(),
-    icon: cutter,
-    imgUrl: glassCutting,
-    title: 'Custom Glass Cutting',
+    icon: measurement,
+    imgUrl: windowMeasurment,
+    title: 'Free Estimate & Measurement',
     description:
-      "We offer precision glass cutting services to fit your unique needs. From windows and doors to shelving and display cases, we provide high-quality, customized glass solutions. Your satisfaction is our priority. We offer personalized service, from the initial design consultation to the final installation, ensuring that every aspect of your project meets and exceeds your expectations. Ready to bring your custom glass project to life? Reach out to us today for a consultation. Our team is here to answer your questions, provide expert guidance, and turn your ideas into a work of art. We look forward to collaborating with you to create beautiful and functional glass pieces that you'll cherish for years to come.",
+      'Our skilled professionals go beyond conventional measuring standards. With a commitment to perfection, we take precise measurements for custom installations, replacements, or upgrades. We value your time. By combining the estimate and measurement processes, we streamline the experience, saving you the hassle of coordinating multiple appointments.',
   },
   {
     id: uuid(),

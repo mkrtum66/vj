@@ -15,7 +15,6 @@ import ContactUsPage from './pages/contactUsPage';
 import ResidentialPage from './pages/residentialPage';
 import PrivacyPolicyPage from './pages/privacyPolicyPage';
 import AccessibilityPage from './pages/accessibilityPage';
-import BlogPage from './pages/blogPage';
 import FaqPage from './pages/faqPage';
 import PortfolioPage from './pages/portfolioPage';
 import CommercialPage from './pages/commercialPage';
@@ -45,7 +44,6 @@ const App = () => {
           <Route path={'/contact-us'} element={<ContactUsPage />} />
 
           <Route path={'/faq'} element={<FaqPage />} />
-          <Route path={'/blog'} element={<BlogPage />} />
           <Route path={'/accessibility'} element={<AccessibilityPage />} />
           <Route path={'/privacy-policy'} element={<PrivacyPolicyPage />} />
         </Routes>
