@@ -1,21 +1,34 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './residentialPage.scss';
 
 import { Container } from 'react-bootstrap';
-import { fetchData } from '../../utils/api';
 import Loader from '../../components/loader';
 import Title from '../../components/title';
+import { useDispatch, useSelector } from 'react-redux';
+import { getResidentialThunk } from '../../redux/thunks/getResidentialThunk';
 
 const ResidentialPage = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [data, setData] = useState([{ imgUrl: '' }]);
+  // const [isLoading, setIsLoading] = useState(true);
+  // const [data, setData] = useState([{ imgUrl: '' }]);
+
+  // useEffect(() => {
+  //   fetchData('residential').then(response => {
+  //     setData(response);
+  //   });
+  //   setIsLoading(false);
+  // }, []);
+
+  // console.log(data);
+
+  const isLoading = useSelector(state => state.loading.isLoading);
+  const resident = useSelector(state => state.residential.residential);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    fetchData('residential').then(response => {
-      setData(response);
-    });
-    setIsLoading(false);
-  }, []);
+    dispatch(getResidentialThunk());
+  }, [dispatch]);
+
+  console.log(resident);
 
   return (
     <div className="residentialPage page-wrapper">
@@ -31,12 +44,12 @@ const ResidentialPage = () => {
           <div className="row mb-5">
             <div className="col-lg-5">
               <div className="img-wrapper">
-                <img src={data[0].imgUrl} alt="img" className="img-fluid" />
+                <img src={resident[0]?.imgUrl} alt="img" className="img-fluid" />
               </div>
             </div>
             <div className="col-lg-7">
               <h4 className="title">Our Residential Solutions</h4>
-              <p className="description">
+              <div className="description">
                 <ul>
                   <li>
                     <span>Glass Installations:</span> We offer a wide array of custom glass
@@ -68,18 +81,18 @@ const ResidentialPage = () => {
                     that help you keep your space organized and visually appealing.
                   </li>
                 </ul>
-              </p>
+              </div>
             </div>
           </div>
           <div className="row flex-row-reverse">
             <div className="col-lg-5">
               <div className="img-wrapper">
-                <img src={data[0].imgUrl} alt="img" className="img-fluid" />
+                <img src={resident[1]?.imgUrl} alt="img" className="img-fluid" />
               </div>
             </div>
             <div className="col-lg-7">
               <h4 className="title">Why Choose Us for Your Residential Building?</h4>
-              <p className="description">
+              <div className="description">
                 <ul>
                   <li>
                     <span>Expertise:</span> With years of experience, our team is equipped with the
@@ -98,7 +111,7 @@ const ResidentialPage = () => {
                     we stand by our work, aiming to exceed your expectations.
                   </li>
                 </ul>
-              </p>
+              </div>
             </div>
           </div>
         </Container>
