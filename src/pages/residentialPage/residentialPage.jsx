@@ -8,18 +8,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getResidentialThunk } from '../../redux/thunks/getResidentialThunk';
 
 const ResidentialPage = () => {
-  // const [isLoading, setIsLoading] = useState(true);
-  // const [data, setData] = useState([{ imgUrl: '' }]);
-
-  // useEffect(() => {
-  //   fetchData('residential').then(response => {
-  //     setData(response);
-  //   });
-  //   setIsLoading(false);
-  // }, []);
-
-  // console.log(data);
-
   const isLoading = useSelector(state => state.loading.isLoading);
   const resident = useSelector(state => state.residential.residential);
   const dispatch = useDispatch();

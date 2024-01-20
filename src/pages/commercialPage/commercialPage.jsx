@@ -1,21 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './commercialPage.scss';
 
 import { Container } from 'react-bootstrap';
-import { fetchData } from '../../utils/api';
 import Loader from '../../components/loader';
 import Title from '../../components/title';
+import { useDispatch, useSelector } from 'react-redux';
+import { getCommercialThunk } from '../../redux/thunks/getCommercialThunk';
 
 const CommercialPage = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [data, setData] = useState([{ imgUrl: '' }]);
+  const isLoading = useSelector(state => state.loading.isLoading);
+  const commerc = useSelector(state => state.commercial.commercial);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    fetchData('projects').then(response => {
-      setData(response);
-    });
-    setIsLoading(false);
-  }, []);
+    dispatch(getCommercialThunk());
+  }, [dispatch]);
 
   return (
     <div className="commercialPage page-wrapper">
@@ -32,12 +31,12 @@ const CommercialPage = () => {
           <div className="row mb-5">
             <div className="col-lg-5">
               <div className="img-wrapper">
-                <img src={data[0].imgUrl} alt="img" className="img-fluid" />
+                <img src={commerc[0]?.imgUrl} alt="img" className="img-fluid" />
               </div>
             </div>
             <div className="col-lg-7">
               <h4 className="title">Our Commercial Solutions</h4>
-              <p className="description">
+              <div className="description">
                 <ul>
                   <li>
                     <span>Glass Installations:</span>Elevate the visual appeal and functionality of
@@ -70,18 +69,18 @@ const CommercialPage = () => {
                     security.
                   </li>
                 </ul>
-              </p>
+              </div>
             </div>
           </div>
           <div className="row flex-row-reverse">
             <div className="col-lg-5">
               <div className="img-wrapper">
-                <img src={data[0].imgUrl} alt="img" className="img-fluid" />
+                <img src={commerc[1]?.imgUrl} alt="img" className="img-fluid" />
               </div>
             </div>
             <div className="col-lg-7">
               <h4 className="title">Why Choose Us for Your Commercial Building?</h4>
-              <p className="description">
+              <div className="description">
                 <ul>
                   <li>
                     <span>Experience:</span> With years of experience, our team has a deep
@@ -100,7 +99,7 @@ const CommercialPage = () => {
                     exceed your expectations by delivering results that enhance your business.
                   </li>
                 </ul>
-              </p>
+              </div>
             </div>
           </div>
           {/*<img src={data[0].imgUrl} alt="img" className="img-fluid" />*/}
