@@ -17,6 +17,7 @@ const SliderModal = props => {
             initialSlide={props.activeitem}
             navigation={true}
             loop={true}
+            autoHeight={true}
             centeredSlides={true}
             modules={[Navigation]}
             className="mySwiper"
@@ -24,7 +25,7 @@ const SliderModal = props => {
             {props.items.map(item => {
               return (
                 <SwiperSlide key={item.id}>
-                  <div>
+                  <div className="m-auto">
                     <img src={item.imgUrl} alt="img" className="img-fluid" />
                   </div>
                 </SwiperSlide>
