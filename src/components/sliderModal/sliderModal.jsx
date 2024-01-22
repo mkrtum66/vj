@@ -22,7 +22,13 @@ const SliderModal = props => {
             className="mySwiper"
           >
             {props.items.map(item => {
-              return <SwiperSlide key={item.key}>{item}</SwiperSlide>;
+              return (
+                <SwiperSlide key={item.id}>
+                  <div>
+                    <img src={item.imgUrl} alt="img" className="img-fluid" />
+                  </div>
+                </SwiperSlide>
+              );
             })}
           </Swiper>
         </Modal.Body>

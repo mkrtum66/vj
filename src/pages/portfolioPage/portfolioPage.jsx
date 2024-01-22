@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import './portfolioPage.scss';
 
@@ -7,35 +7,44 @@ import { Container, Tab, Tabs } from 'react-bootstrap';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import SliderModal from '../../components/sliderModal';
 import Title from '../../components/title';
+import { useDispatch, useSelector } from 'react-redux';
+import { getCommercialThunk } from '../../redux/thunks/getCommercialThunk';
+import Loader from '../../components/loader';
+import { getResidentialThunk } from '../../redux/thunks/getResidentialThunk';
 
 const PortfolioPage = () => {
-  const [key, setKey] = useState('home');
-  const [clickedItem, setClickedItem] = useState(0);
+  const [key, setKey] = useState('residential');
+  const [clickedItem, setClickedItem] = useState('');
   const [modalShow, setModalShow] = React.useState(false);
+  const [modalItems, setModalItems] = useState([]);
+
+  const isLoading = useSelector(state => state.loading.isLoading);
+  const commerc = useSelector(state => state.commercial.commercial);
+  const resident = useSelector(state => state.residential.residential);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getCommercialThunk());
+    dispatch(getResidentialThunk());
+  }, [dispatch]);
+
+  useEffect(() => {
+    setModalItems(resident);
+  }, [resident]);
 
   const handleShowSliderModal = index => {
     setClickedItem(index);
     setModalShow(true);
   };
 
-  const items = Array.from({ length: 20 }).map((_, index) => (
-    <div
-      key={index}
-      style={{
-        height: index % 2 ? '200px' : '250px',
-        background: '#' + Math.floor(Math.random() * 16777215).toString(16),
-        margin: '10px',
-        borderRadius: '8px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        cursor: 'pointer',
-      }}
-      onClick={() => handleShowSliderModal(index)}
-    >
-      Item {index}
-    </div>
-  ));
+  const handleChangeTabs = k => {
+    setKey(k);
+    if (k === 'residential') {
+      setModalItems(resident);
+    } else {
+      setModalItems(commerc);
+    }
+  };
 
   return (
     <div className="portfolioPage page-wrapper">
@@ -44,25 +53,57 @@ const PortfolioPage = () => {
         <Tabs
           id="controlled-tab-example"
           activeKey={key}
-          onSelect={k => setKey(k)}
+          onSelect={k => handleChangeTabs(k)}
           className="mb-3"
         >
-          <Tab eventKey="home" title="Home">
-            Tab content for Home
-            <ResponsiveMasonry columnsCountBreakPoints={{ 300: 2, 767: 3, 991: 4 }}>
-              <Masonry>{items}</Masonry>
-            </ResponsiveMasonry>
+          <Tab eventKey="residential" title="Residential">
+            {!isLoading ? (
+              <ResponsiveMasonry columnsCountBreakPoints={{ 300: 2, 767: 3, 991: 4 }}>
+                <Masonry gutter="15px">
+                  {resident.map(item => {
+                    return (
+                      <div key={item.id} className="masonry-img-wrapper">
+                        <img
+                          src={item.imgUrl}
+                          alt="img"
+                          className="img-fluid"
+                          onClick={() => handleShowSliderModal(item.id)}
+                        />
+                      </div>
+                    );
+                  })}
+                </Masonry>
+              </ResponsiveMasonry>
+            ) : (
+              <Loader />
+            )}
           </Tab>
-          <Tab eventKey="profile" title="Profile">
-            Tab content for Profile
-            <ResponsiveMasonry columnsCountBreakPoints={{ 300: 2, 767: 3, 991: 4 }}>
-              <Masonry>{items}</Masonry>
-            </ResponsiveMasonry>
+          <Tab eventKey="commercial" title="Commercial">
+            {!isLoading ? (
+              <ResponsiveMasonry columnsCountBreakPoints={{ 300: 2, 767: 3, 991: 4 }}>
+                <Masonry gutter="15px">
+                  {commerc.map(item => {
+                    return (
+                      <div key={item.id} className="masonry-img-wrapper">
+                        <img
+                          src={item.imgUrl}
+                          alt="img"
+                          className="img-fluid"
+                          onClick={() => handleShowSliderModal(item.id)}
+                        />
+                      </div>
+                    );
+                  })}
+                </Masonry>
+              </ResponsiveMasonry>
+            ) : (
+              <Loader />
+            )}
           </Tab>
         </Tabs>
         <SliderModal
-          activeitem={clickedItem}
-          items={items}
+          activeitem={modalItems.findIndex(item => item.id === clickedItem)}
+          items={modalItems}
           show={modalShow}
           onHide={() => setModalShow(false)}
         />
