@@ -5,12 +5,13 @@ export const LOGIN_ERROR = 'LOGIN_ERROR';
 const initialState = {
   loading: false,
   error: null,
+  user: null,
 };
 
 function authReducer(state = initialState, action) {
   switch (action.type) {
     case LOGIN_START:
-      return { ...state, loading: true, error: null };
+      return { ...state, loading: true, error: null, user: action.payload };
     case LOGIN_SUCCESS:
       return { ...state, loading: false };
     case LOGIN_ERROR:

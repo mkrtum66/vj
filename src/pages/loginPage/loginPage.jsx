@@ -9,7 +9,7 @@ import { useAuthCheck } from '../../utils/hook/useAuthCheck';
 import { Container } from 'react-bootstrap';
 
 const LoginPage = () => {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false); // Added state for "Remember Me"
   const dispatch = useDispatch();
@@ -19,7 +19,7 @@ const LoginPage = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(login(username, password, rememberMe, navigate)); // Pass rememberMe to the login action
+    dispatch(login(email, password, rememberMe, navigate)); // Pass rememberMe to the login action
   };
 
   // Toggle "Remember Me" checkbox
@@ -35,8 +35,8 @@ const LoginPage = () => {
         <h1>This is login Page</h1>
         <form onSubmit={handleSubmit}>
           <div>
-            <label>Username:</label>
-            <input type="text" value={username} onChange={e => setUsername(e.target.value)} />
+            <label>Email:</label>
+            <input type="text" value={email} onChange={e => setEmail(e.target.value)} />
           </div>
           <div>
             <label>Password:</label>
