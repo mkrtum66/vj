@@ -21,6 +21,9 @@ import CommercialPage from './pages/commercialPage';
 
 import ScrollToTop from './utils/scrollToTop';
 import ServicesPage from './pages/servicesPage';
+import LoginPage from './pages/loginPage';
+import AdminPage from './pages/adminPage';
+import ProtectedRoute from './utils/hoc/protectedRoute';
 
 const App = () => {
   const [myRef, setMyRef] = useState();
@@ -46,6 +49,16 @@ const App = () => {
           <Route path={'/faq'} element={<FaqPage />} />
           <Route path={'/accessibility'} element={<AccessibilityPage />} />
           <Route path={'/privacy-policy'} element={<PrivacyPolicyPage />} />
+
+          <Route path={'/login'} element={<LoginPage />} />
+          <Route
+            path="/admin"
+            element={
+              <ProtectedRoute>
+                <AdminPage />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </div>
       <Footer />
