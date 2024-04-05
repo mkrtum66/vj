@@ -22,11 +22,11 @@ const CommercialPage = () => {
         <Container>
           <Title>Commercial</Title>
           <p className="mb-5">
-            At VJ Glass and Mirrors, we understand the impact that a well-designed and functional
-            commercial space can have on your business. We specialize in a wide range of solutions
-            to enhance the aesthetics, functionality, and security of your commercial building. From
-            striking glass installations to elegant doors and storefronts, we're here to transform
-            your space into a hub of professionalism and success.
+            At VJ Glass and Moldings Inc., we understand the impact that a well-designed and
+            functional commercial space can have on your business. We specialize in a wide range of
+            solutions to enhance the aesthetics, functionality, and security of your commercial
+            building. From striking glass installations to elegant doors and storefronts, we're here
+            to transform your space into a hub of professionalism and success.
           </p>
           <div className="row mb-5">
             <div className="col-lg-5">

@@ -12,7 +12,7 @@ const FaqPage = () => {
         <div className="my-5">
           <p className="fw-bold mb-3 text-decoration-underline">1. What services do you offer?</p>
           <p>
-            VJ GLASS & MOLDINGS provides a range of glass services, including installations,
+            VJ GLASS & MOLDINGS INC. provides a range of glass services, including installations,
             repairs, replacements, consultations, and custom glass solutions. Whether you need a new
             glass fixture or repairs to an existing one, we have you covered.
           </p>
@@ -95,7 +95,7 @@ const FaqPage = () => {
         </div>
         <div className="my-5">
           <p className="fw-bold mb-3 text-decoration-underline">
-            10. How do I get in touch with VJ GLASS & MOLDINGS?
+            10. How do I get in touch with VJ GLASS & MOLDINGS INC.?
           </p>
           <p>
             You can contact us via phone or email. Visit the "Contact Us" page for detailed contact

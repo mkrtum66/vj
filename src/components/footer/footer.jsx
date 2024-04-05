@@ -72,7 +72,7 @@ const Footer = () => {
           <div className="copyright">
             © Copyright{' '}
             <strong>
-              <span>VJ Glass & Mirrors</span>
+              <span>VJ Glass & Moldings Inc.</span>
             </strong>
             . All Rights Reserved.
           </div>

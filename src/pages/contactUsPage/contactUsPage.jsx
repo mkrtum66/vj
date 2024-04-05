@@ -16,9 +16,9 @@ const ContactUsPage = () => {
             <Title>Contact Us</Title>
             <p className="mb-4">
               If you're ready to enhance your space with the beauty of glass and mirrors, VJ Glass &
-              Mirrors is here to assist you. Get in touch with us today to discuss your project,
-              request a quote, or simply learn more about our services. We look forward to turning
-              your vision into a reality.
+              Moldings Inc. is here to assist you. Get in touch with us today to discuss your
+              project, request a quote, or simply learn more about our services. We look forward to
+              turning your vision into a reality.
             </p>
             <div className="visit-us mb-4">
               <p className="mb-1">

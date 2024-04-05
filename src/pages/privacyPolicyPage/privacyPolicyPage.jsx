@@ -10,8 +10,8 @@ const PrivacyPolicyPage = () => {
         <h2>Privacy Policy</h2>
         <p>Last Updated: 09/06/2023</p>
         <p>
-          At <span className="fw-bold">VJ GLASS & MOLDINGS</span>, we are committed to ensuring the
-          privacy and security of your personal information. This Privacy Policy outlines how we
+          At <span className="fw-bold">VJ GLASS & MOLDINGS INC.</span>, we are committed to ensuring
+          the privacy and security of your personal information. This Privacy Policy outlines how we
           collect, use, disclose, and safeguard your data when you visit our website or engage with
           our glass services.
         </p>

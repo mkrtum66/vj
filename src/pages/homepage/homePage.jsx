@@ -19,7 +19,7 @@ const HomePage = ({ myRef }) => {
       <section id="welcome" className="section-wrapper">
         <Container>
           <div className="center-text">
-            <h1>VJ Glass & Moldings</h1>
+            <h1>VJ Glass & Moldings Inc.</h1>
             <h2>Your Source for Stunning Glass and Moldings</h2>
             <p>
               We're dedicated to bringing beauty and elegance into your life <br /> through the

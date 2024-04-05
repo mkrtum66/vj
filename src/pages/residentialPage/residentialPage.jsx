@@ -24,10 +24,10 @@ const ResidentialPage = () => {
         <Container>
           <Title>Residential</Title>
           <p className="mb-5">
-            At VJ Glass and Mirrors, we are your one-stop destination for enhancing the beauty,
-            functionality, and security of your residential building. We specialize in a range of
-            solutions, from stunning glass installations to elegant doors, all tailored to transform
-            your living space into a place of luxury and comfort.
+            At VJ Glass and Moldings Inc., we are your one-stop destination for enhancing the
+            beauty, functionality, and security of your residential building. We specialize in a
+            range of solutions, from stunning glass installations to elegant doors, all tailored to
+            transform your living space into a place of luxury and comfort.
           </p>
           <div className="row mb-5">
             <div className="col-lg-5">
