@@ -1,6 +1,7 @@
 export const LOGIN_START = 'LOGIN_START';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 export const LOGIN_ERROR = 'LOGIN_ERROR';
+export const LOGOUT = 'LOGOUT';
 
 const initialState = {
   loading: false,
@@ -16,6 +17,8 @@ function authReducer(state = initialState, action) {
       return { ...state, loading: false };
     case LOGIN_ERROR:
       return { ...state, loading: false, error: action.payload };
+    case LOGOUT:
+      return { ...initialState };
     default:
       return state;
   }
