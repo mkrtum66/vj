@@ -26,5 +26,6 @@ export const auth = getAuth(app);
 // const analytics = getAnalytics(app);
 const projectFirestore = getFirestore(app);
 const projectStorage = getStorage(app);
+const db = getFirestore(app);
 
-export { projectFirestore, projectStorage };
+export { projectFirestore, projectStorage, db };
