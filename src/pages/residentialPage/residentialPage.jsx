@@ -16,8 +16,6 @@ const ResidentialPage = () => {
     dispatch(getResidentialThunk());
   }, [dispatch]);
 
-  console.log(resident);
-
   return (
     <div className="residentialPage page-wrapper">
       {!isLoading ? (
@@ -32,7 +30,7 @@ const ResidentialPage = () => {
           <div className="row mb-5">
             <div className="col-lg-5">
               <div className="img-wrapper">
-                <img src={resident[0]?.imgUrl} alt="img" className="img-fluid" />
+                <img src={resident[17]?.imgUrl} alt="img" className="img-fluid" />
               </div>
             </div>
             <div className="col-lg-7">
@@ -75,7 +73,7 @@ const ResidentialPage = () => {
           <div className="row flex-row-reverse">
             <div className="col-lg-5">
               <div className="img-wrapper">
-                <img src={resident[1]?.imgUrl} alt="img" className="img-fluid" />
+                <img src={resident[31]?.imgUrl} alt="img" className="img-fluid" />
               </div>
             </div>
             <div className="col-lg-7">

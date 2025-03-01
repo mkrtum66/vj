@@ -31,7 +31,7 @@ const CommercialPage = () => {
           <div className="row mb-5">
             <div className="col-lg-5">
               <div className="img-wrapper">
-                <img src={commerc[0]?.imgUrl} alt="img" className="img-fluid" />
+                <img src={commerc[11]?.imgUrl} alt="img" className="img-fluid" />
               </div>
             </div>
             <div className="col-lg-7">
@@ -75,7 +75,7 @@ const CommercialPage = () => {
           <div className="row flex-row-reverse">
             <div className="col-lg-5">
               <div className="img-wrapper">
-                <img src={commerc[1]?.imgUrl} alt="img" className="img-fluid" />
+                <img src={commerc[12]?.imgUrl} alt="img" className="img-fluid" />
               </div>
             </div>
             <div className="col-lg-7">

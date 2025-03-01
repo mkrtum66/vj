@@ -1,0 +1,11 @@
+.showerPage{
+  .masonry-img-wrapper{
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 300ms ease;
+    &:hover{
+      transform: scale(1.05);
+    }
+  }
+}
