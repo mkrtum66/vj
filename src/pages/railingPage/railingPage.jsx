@@ -30,8 +30,6 @@ const RailingPage = () => {
     setModalShow(true);
   };
 
-  console.log(railings);
-
   return (
     <div className="railingPage page-wrapper">
       <Container>
