@@ -5,6 +5,7 @@ import { residentialReducer } from './reducers/residentialReducer';
 import { commercialReducer } from './reducers/commercialReducer';
 import authReducer from './reducers/authReducer';
 import { showersReducer } from './reducers/showersReducer';
+import { railingsReducer } from './reducers/railingsReducer';
 
 export const rootReducer = combineReducers({
   loading: loadingReducer,
@@ -12,5 +13,6 @@ export const rootReducer = combineReducers({
   residential: residentialReducer,
   commercial: commercialReducer,
   showers: showersReducer,
+  railings: railingsReducer,
   auth: authReducer,
 });
