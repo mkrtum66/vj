@@ -14,16 +14,18 @@ import Title from '../../components/title';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import ConfirmModal from '../../components/confirmModal';
 
+import deleteImg from '../../assets/icons/bin.png';
+
 const AdminPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const place = 'residential';
 
   const [selectedFile, setSelectedFile] = useState(null);
   const { uploadLoading, imageUrl, uploadError } = useSelector(state => state.uploadImage);
   const { deleteLoading, deleteError } = useSelector(state => state.deleteImage);
 
   const [key, setKey] = useState('residential');
+  const [uploadImagePlace, setUploadImagePlace] = useState('residential');
   const [clickedItem, setClickedItem] = useState('');
   const [clickedItemName, setClickedItemName] = useState('');
   const [modalShow, setModalShow] = React.useState(false);
@@ -41,7 +43,7 @@ const AdminPage = () => {
   };
 
   const handleUpload = () => {
-    dispatch(uploadImage(selectedFile, place));
+    dispatch(uploadImage(selectedFile, uploadImagePlace));
   };
 
   const handleLogout = () => {
@@ -70,7 +72,20 @@ const AdminPage = () => {
         </div>
 
         <div className="upload-form">
-          <Form.Group controlId="formFile" className="mb-3 d-flex align-items-end gap-3">
+          <Form.Group
+            controlId="formFile"
+            className="mb-3 d-flex flex-column align-items-start gap-3"
+          >
+            <div>
+              <Form.Select
+                aria-label="Image Place"
+                value={uploadImagePlace}
+                onChange={event => setUploadImagePlace(event.target.value)}
+              >
+                <option value="residential">Residential</option>
+                <option value="commercial">Commercial</option>
+              </Form.Select>
+            </div>
             <div>
               <Form.Label>Upload Image</Form.Label>
               <Form.Control type="file" onChange={handleFileChange} />
@@ -109,7 +124,12 @@ const AdminPage = () => {
                     return (
                       <div key={item.id} className="masonry-img-wrapper">
                         <img src={item.imgUrl} alt={item.name} className="img-fluid" />
-                        <div onClick={() => handleShowSliderModal(item.id, item.name)}>DELETE</div>
+                        <div
+                          className="delete-btn-wrapper"
+                          onClick={() => handleShowSliderModal(item.id, item.name)}
+                        >
+                          <img src={deleteImg} alt="img" className="img-fluid" />
+                        </div>
                       </div>
                     );
                   })}
@@ -127,7 +147,12 @@ const AdminPage = () => {
                     return (
                       <div key={item.id} className="masonry-img-wrapper">
                         <img src={item.imgUrl} alt="img" className="img-fluid" />
-                        <div onClick={() => handleShowSliderModal(item.id)}>DELETE</div>
+                        <div
+                          className="delete-btn-wrapper"
+                          onClick={() => handleShowSliderModal(item.id, item.name)}
+                        >
+                          <img src={deleteImg} alt="img" className="img-fluid" />
+                        </div>
                       </div>
                     );
                   })}

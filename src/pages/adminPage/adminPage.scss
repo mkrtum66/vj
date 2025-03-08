@@ -2,6 +2,19 @@
   .masonry-img-wrapper{
     border-radius: 5px;
     overflow: hidden;
+    position: relative;
+    .delete-btn-wrapper{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      transition: all 150ms ease-in-out;
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
   }
   .upload-form{
     max-width: 600px;
