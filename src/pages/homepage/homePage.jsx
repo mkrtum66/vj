@@ -5,6 +5,7 @@ import { scrollToSection } from '../../utils/scrollToSection';
 import Title from '../../components/title';
 
 import check from '../../assets/icons/double-check.png';
+import ourCompany from '../../assets/images/file-1.png';
 import Team from '../../components/team';
 import Service from '../../components/service/service';
 import { services } from '../../components/service/mock';
@@ -87,7 +88,7 @@ const HomePage = ({ myRef }) => {
               </p>
             </div>
             <div className="col-md-5 img-fluid img-place">
-              <img src={''} alt="img" className="img-fluid" />
+              <img src={ourCompany} alt="img" className="img-fluid" />
             </div>
           </div>
         </section>
