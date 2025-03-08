@@ -4,7 +4,7 @@ import { getSfDoors } from '../actions/sfDoorsAction';
 
 export const getSfDoorsThunk = () => async dispatch => {
   dispatch(setLoading(true));
-  const sfDoors = await fetchData('railings').then(response => response);
+  const sfDoors = await fetchData('sliding-folding-doors').then(response => response);
   dispatch(getSfDoors(sfDoors));
   dispatch(setLoading(false));
 };
