@@ -118,11 +118,11 @@ const Header = ({ setMyRef }) => {
                     Our Company
                   </NavLink>
                 </div>
-                <div className={'dropdown-link'}>
-                  <NavLink to={'/'} onClick={() => clickOnLink('team')}>
-                    Team
-                  </NavLink>
-                </div>
+                {/*<div className={'dropdown-link'}>*/}
+                {/*  <NavLink to={'/'} onClick={() => clickOnLink('team')}>*/}
+                {/*    Team*/}
+                {/*  </NavLink>*/}
+                {/*</div>*/}
               </NavDropdown>
               <NavDropdown
                 title="Products"
@@ -156,11 +156,11 @@ const Header = ({ setMyRef }) => {
                     Sliding & Folding Doors
                   </NavLink>
                 </div>
-                <div className={'dropdown-link'}>
-                  <NavLink to={'/entrance-doors'} onClick={() => clickOnLink('')}>
-                    Entrance Doors
-                  </NavLink>
-                </div>
+                {/*<div className={'dropdown-link'}>*/}
+                {/*  <NavLink to={'/entrance-doors'} onClick={() => clickOnLink('')}>*/}
+                {/*    Entrance Doors*/}
+                {/*  </NavLink>*/}
+                {/*</div>*/}
                 <div className={'dropdown-link'}>
                   <NavLink to={'/portfolio'} onClick={() => clickOnLink('')}>
                     Portfolio

@@ -6,7 +6,7 @@ import Title from '../../components/title';
 
 import check from '../../assets/icons/double-check.png';
 import ourCompany from '../../assets/images/file-1.png';
-import Team from '../../components/team';
+// import Team from '../../components/team';
 import Service from '../../components/service/service';
 import { services } from '../../components/service/mock';
 
@@ -92,10 +92,10 @@ const HomePage = ({ myRef }) => {
             </div>
           </div>
         </section>
-        <section id="team" className="section-wrapper">
-          <Title>Our Team</Title>
-          <Team />
-        </section>
+        {/*<section id="team" className="section-wrapper">*/}
+        {/*  <Title>Our Team</Title>*/}
+        {/*  <Team />*/}
+        {/*</section>*/}
         {/*<section id="partners" className="section-wrapper">*/}
         {/*  <Title>Partners</Title>*/}
         {/*</section>*/}

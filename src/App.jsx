@@ -27,7 +27,7 @@ import ProtectedRoute from './utils/hoc/protectedRoute';
 import ShowersPage from './pages/showersPage';
 import RailingPage from './pages/railingPage';
 import SlidingFoldingDoorsPage from './pages/slidingFoldingDoorsPage';
-import EntranceDoorPage from './pages/entranceDoorPage';
+// import EntranceDoorPage from './pages/entranceDoorPage';
 
 const App = () => {
   const [myRef, setMyRef] = useState();
@@ -49,7 +49,7 @@ const App = () => {
           <Route path={'/showers'} element={<ShowersPage />} />
           <Route path={'/railing'} element={<RailingPage />} />
           <Route path={'/sliding-folding-doors'} element={<SlidingFoldingDoorsPage />} />
-          <Route path={'/entrance-doors'} element={<EntranceDoorPage />} />
+          {/*<Route path={'/entrance-doors'} element={<EntranceDoorPage />} />*/}
           <Route path={'/portfolio'} element={<PortfolioPage />} />
           <Route path={'/services'} element={<ServicesPage />} />
           <Route path={'/contact-us'} element={<ContactUsPage />} />
