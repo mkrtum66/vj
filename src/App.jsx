@@ -27,6 +27,7 @@ import ProtectedRoute from './utils/hoc/protectedRoute';
 import ShowersPage from './pages/showersPage';
 import RailingPage from './pages/railingPage';
 import SlidingFoldingDoorsPage from './pages/slidingFoldingDoorsPage';
+import StoreFrontPage from './pages/storeFrontPage';
 // import EntranceDoorPage from './pages/entranceDoorPage';
 
 const App = () => {
@@ -49,6 +50,7 @@ const App = () => {
           <Route path={'/showers'} element={<ShowersPage />} />
           <Route path={'/railing'} element={<RailingPage />} />
           <Route path={'/sliding-folding-doors'} element={<SlidingFoldingDoorsPage />} />
+          <Route path={'/store-front'} element={<StoreFrontPage />} />
           {/*<Route path={'/entrance-doors'} element={<EntranceDoorPage />} />*/}
           <Route path={'/portfolio'} element={<PortfolioPage />} />
           <Route path={'/services'} element={<ServicesPage />} />

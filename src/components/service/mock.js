@@ -1,10 +1,13 @@
 import { v4 as uuid } from 'uuid';
 import measurement from '../../assets/icons/measurement.png';
 import reflection from '../../assets/icons/reflection.png';
-import window from '../../assets/icons/window.png';
+import window_repair from '../../assets/icons/window-repair.png';
 import shower from '../../assets/icons/shower.png';
 import mirror from '../../assets/icons/mirror.png';
 import railing from '../../assets/icons/footsteps.png';
+import windows from '../../assets/icons/window-frame.png';
+import patioDoorsIcon from '../../assets/icons/sliding-door.png';
+import storeFrontIcon from '../../assets/icons/store-front.png';
 
 import windowMeasurment from '../../assets/servicesImages/window-measurment.jpeg';
 import mirrorInstallation from '../../assets/servicesImages/mirror-ntsallation.png';
@@ -12,8 +15,6 @@ import windowRepair from '../../assets/servicesImages/window-repair.jpeg';
 import frameLessShower from '../../assets/servicesImages/frameless-shower.jpeg';
 import mirrors from '../../assets/servicesImages/mirrors.jpeg';
 import railingGlass from '../../assets/servicesImages/railingGlass.jpeg';
-import mirrorClosetDoor from '../../assets/servicesImages/mirror-closet-door.jpeg';
-import moldings from '../../assets/servicesImages/moldings.jpeg';
 import windowInstallation from '../../assets/servicesImages/window-installation.jpg';
 import patioDoors from '../../assets/servicesImages/patio-doors.jpeg';
 import storeFront from '../../assets/servicesImages/storefront.jpeg';
@@ -37,7 +38,7 @@ export const services = [
   },
   {
     id: uuid(),
-    icon: window,
+    icon: window_repair,
     imgUrl: windowRepair,
     title: 'Glass Repairs',
     description:
@@ -67,25 +68,25 @@ export const services = [
     description:
       "We are passionate about elevating your space with stunning and functional railing solutions. We specialize in the design, fabrication, and installation of high-quality railings that not only enhance the safety of your property but also add a touch of elegance to your surroundings. Glass railings are a popular choice for homeowners and businesses seeking a contemporary, open, and unobstructed feel for their space. Create a sophisticated and modern ambiance in your space with glass railings from us. Whether it's for a residential or commercial setting, our glass railings offer a timeless blend of safety and style. Ready to enhance your space with our glass railing systems? Contact us today for a consultation, request a quote, or schedule an installation appointment.",
   },
+  // {
+  //   id: uuid(),
+  //   icon: '',
+  //   imgUrl: mirrorClosetDoor,
+  //   title: 'Closet Doors',
+  //   description:
+  //     "We offer a stylish and practical solution to maximize space and elevate the aesthetics of your home with our sliding mirror closet doors. Our designs combine functionality and beauty to transform your closet space into a luxurious and convenient area. Our expert installers ensure that your sliding mirror closet doors are installed securely and operate smoothly. We use high-quality materials to ensure the safety and longevity of your sliding mirror closet doors. Transform your closet space with sliding mirror closet doors from [Your Business Name]. Whether you're looking to modernize your bedroom or create a functional dressing area, our doors provide an elegant and practical solution.",
+  // },
+  // {
+  //   id: uuid(),
+  //   icon: '',
+  //   imgUrl: moldings,
+  //   title: 'Moldings',
+  //   description:
+  //     "We take pride in offering exquisite glass moldings that enhance the beauty and functionality of your glass installations. Our custom glass moldings are designed to complement and protect your glass surfaces while adding a touch of sophistication to your space. Upgrade your glass surfaces with glass moldings from us. Whether it's adding a finishing touch to your glass shelves or protecting the edges of your glass tabletop, our moldings provide an elegant and practical solution. Ready to enhance your glass installations with our custom glass moldings? Contact us today for a consultation, request a quote, or schedule installation.",
+  // },
   {
     id: uuid(),
-    icon: '',
-    imgUrl: mirrorClosetDoor,
-    title: 'Closet Doors',
-    description:
-      "We offer a stylish and practical solution to maximize space and elevate the aesthetics of your home with our sliding mirror closet doors. Our designs combine functionality and beauty to transform your closet space into a luxurious and convenient area. Our expert installers ensure that your sliding mirror closet doors are installed securely and operate smoothly. We use high-quality materials to ensure the safety and longevity of your sliding mirror closet doors. Transform your closet space with sliding mirror closet doors from [Your Business Name]. Whether you're looking to modernize your bedroom or create a functional dressing area, our doors provide an elegant and practical solution.",
-  },
-  {
-    id: uuid(),
-    icon: '',
-    imgUrl: moldings,
-    title: 'Moldings',
-    description:
-      "We take pride in offering exquisite glass moldings that enhance the beauty and functionality of your glass installations. Our custom glass moldings are designed to complement and protect your glass surfaces while adding a touch of sophistication to your space. Upgrade your glass surfaces with glass moldings from us. Whether it's adding a finishing touch to your glass shelves or protecting the edges of your glass tabletop, our moldings provide an elegant and practical solution. Ready to enhance your glass installations with our custom glass moldings? Contact us today for a consultation, request a quote, or schedule installation.",
-  },
-  {
-    id: uuid(),
-    icon: '',
+    icon: windows,
     imgUrl: windowInstallation,
     title: 'Windows',
     description:
@@ -93,7 +94,7 @@ export const services = [
   },
   {
     id: uuid(),
-    icon: '',
+    icon: patioDoorsIcon,
     imgUrl: patioDoors,
     title: 'Patio Doors',
     description:
@@ -101,7 +102,7 @@ export const services = [
   },
   {
     id: uuid(),
-    icon: '',
+    icon: storeFrontIcon,
     imgUrl: storeFront,
     title: 'Store Front',
     description:

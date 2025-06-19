@@ -102,7 +102,7 @@ const HomePage = ({ myRef }) => {
         <section id="services" className="section-wrapper">
           <Title>Our Services</Title>
           <div className="row">
-            {services.slice(0, 6).map(item => {
+            {services.map(item => {
               return (
                 <div key={item.id} className="col-lg-4 col-md-6 col-12 mb-4">
                   <Service imgUrl={item.icon} title={item.title} description={item.description} />

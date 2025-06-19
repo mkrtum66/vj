@@ -156,6 +156,11 @@ const Header = ({ setMyRef }) => {
                     Sliding & Folding Doors
                   </NavLink>
                 </div>
+                <div className={'dropdown-link'}>
+                  <NavLink to={'/store-front'} onClick={() => clickOnLink('')}>
+                    Store Front
+                  </NavLink>
+                </div>
                 {/*<div className={'dropdown-link'}>*/}
                 {/*  <NavLink to={'/entrance-doors'} onClick={() => clickOnLink('')}>*/}
                 {/*    Entrance Doors*/}
